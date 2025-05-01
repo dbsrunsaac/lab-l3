@@ -1,0 +1,95 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{academicons}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tabularx} % Asegúrate de incluir este paquete
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Color Enlace
+\definecolor{colorEnlace}{RGB}{0, 0, 0}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=colorEnlace,
+	citecolor=colorEnlace,
+	urlcolor=colorEnlace,
+	pdfauthor={Davis Bremdow Salazar Roa},
+	pdftitle={Sistemas Embebidos}
+}
+\lstset{
+	language=C,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	commentstyle=\color{green!60!black},
+	showstringspaces=false,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	frame=none,
+	breaklines=true,
+	tabsize=1
+}
+
+% Control 
+\usepackage{amsmath}
+\begin{document}
+	
+	\title{Informe final - Amplificador Diferencial Retroalimentado}
+	\author{
+		\makebox[\textwidth][c]{\large{Universidad Nacional de San Antonio Abad del Cusco}}\\
+		\makebox[\textwidth][c]{\large\textit{Facultad de Ingeniería Electrónica}}\\[1ex]
+		
+		\IEEEauthorblockN{Ruth Juana Espino Puma - 184657}
+		\IEEEauthorblockA{Estudiante de Ingeniería Electrónica \\
+			Cusco, Perú \\
+			200353@unsaac.edu.pe}
+		\and
+		\IEEEauthorblockN{Davis Bremdow Salazar Roa - 200353}
+		\IEEEauthorblockA{Estudiante de Ingeniería Electrónica \\
+			Cusco, Perú \\
+			200353@unsaac.edu.pe}
+	}
+	\maketitle
+	
+	
+	\begin{abstract}
+		Los amplificadores retroalimentados son dispositivos electrónicos que incorporan una parte de la señal de salida de nuevo a su entrada con el objetivo de controlar y mejorar su comportamiento. Esta retroalimentación puede ser negativa, lo que estabiliza la ganancia, reduce la distorsión y amplía el ancho de banda, o positiva, que se utiliza en aplicaciones como osciladores. La retroalimentación negativa es ampliamente usada debido a sus beneficios en linealidad y estabilidad.
+		
+		Estos amplificadores son esenciales en diversas aplicaciones como amplificadores operacionales, filtros activos, sistemas de control automático, telecomunicaciones e instrumentación médica. Su importancia radica en que permiten un control preciso de parámetros eléctricos, mejorando el desempeño general del sistema y facilitando el diseño de circuitos confiables y predecibles.
+	\end{abstract}
+	
+	\begin{IEEEkeywords}
+		feedback, amplifier, gain, stability, bandwidth, distortion, negative, positive, op-amp, linearity
+	\end{IEEEkeywords}
+	
+	% Contenido del documento
+	
+	
+	\bibliographystyle{IEEEtran}
+	\bibliography{biblio}
+\end{document}

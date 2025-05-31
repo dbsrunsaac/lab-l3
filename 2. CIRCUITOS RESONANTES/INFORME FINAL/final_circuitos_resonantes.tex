@@ -112,7 +112,7 @@
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.4\textwidth]{circuito-serie}
+		\includegraphics[width=0.4\textwidth]{media/circuito-serie}
 		\caption{Circuito Resonante en Serie}
 		\label{fig:circuito-serie}
 	\end{figure}
@@ -148,21 +148,68 @@
 		\caption{Valores simulados experimentalmente - Circuito Serie}
 		\label{tab:mediciones-serie}
 	\end{table}
-		
-	
-	
-	
 	
 	Mostrándose la evolución de la corriente de forma gráfica para el método experimental en la figura \ref{fig:grafica-corriente-serie}
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{grafica-corriente-serie}
+		\includegraphics[width=0.5\textwidth]{media/grafica-corriente-serie}
 		\caption{Corriente en función de la frecuencia - Circuito Serie}
 		\label{fig:grafica-corriente-serie}
 	\end{figure}
 	
-
+	Para la curva teórica se hizo uso de la expresión analítica referente al circuito serie ejemplificado por la ecuación \ref{eq:corriente-teorica-serie}, usando los valores de reactancia y resistencia definidos en el circuito a implementar.
+	
+	\begin{equation}
+		I_o = \frac{V_o}{Z} = \frac{V_o}{\sqrt{(R + R_l)^2 + (\omega L - \frac{1}{\omega C})^2}}
+		\label{eq:corriente-teorica-serie}
+	\end{equation}
+	
+	Además para el calculo de la corriente de salida $I_o$, fue necesario tener como referencia un voltaje de salida $V_o$ para cada frecuencia, usando como referencia para este propósito los voltajes en la tabla \ref{tab:mediciones-serie}.
+	
+	Los valores teóricos calculados se muestran en la tabla \ref{tab:valores-teoricos-serie} en la cual se detalla la frecuencia, el voltaje de salida $V_o [mV]$ y la corriente teórica $I_o [mA]$ en función a la impedancia total del circuito.  
+	
+	\begin{table}[]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Barrido de frecuencias}}                                                    \\ \hline
+			\multicolumn{1}{|c|}{\textbf{f (Hz)}} & \multicolumn{1}{c|}{\textbf{Vo {[}mV{]}}} & \textbf{Io {[}mA{]}} \\ \hline
+			\multicolumn{1}{|c|}{10}              & \multicolumn{1}{c|}{333.437}              & 0.103774             \\ \hline
+			\multicolumn{1}{|c|}{20}              & \multicolumn{1}{c|}{516.629}              & 0.250128             \\ \hline
+			\multicolumn{1}{|c|}{50}              & \multicolumn{1}{c|}{662.684}              & 0.41338              \\ \hline
+			\multicolumn{1}{|c|}{100}             & \multicolumn{1}{c|}{695.498}              & 0.455872             \\ \hline
+			\multicolumn{1}{|c|}{200}             & \multicolumn{1}{c|}{704.455}              & 0.467861             \\ \hline
+			\multicolumn{1}{|c|}{300}             & \multicolumn{1}{c|}{706.099}              & 0.470101             \\ \hline
+			\multicolumn{1}{|c|}{400}             & \multicolumn{1}{c|}{706.733}              & 0.47091              \\ \hline
+			\multicolumn{1}{|c|}{500}             & \multicolumn{1}{c|}{706.954}              & 0.471217             \\ \hline
+			\multicolumn{1}{|c|}{600}             & \multicolumn{1}{c|}{707.086}              & 0.471372             \\ \hline
+			\multicolumn{1}{|c|}{700}             & \multicolumn{1}{c|}{707.1}                & 0.4714               \\ \hline
+			\multicolumn{1}{|c|}{708.93}          & \multicolumn{1}{c|}{707.1}                & 0.4714               \\ \hline
+			\multicolumn{1}{|c|}{850}             & \multicolumn{1}{c|}{707.063}              & 0.471353             \\ \hline
+			\multicolumn{1}{|c|}{950}             & \multicolumn{1}{c|}{706.984}              & 0.471263             \\ \hline
+			\multicolumn{1}{|c|}{1000}            & \multicolumn{1}{c|}{706.939}              & 0.47121              \\ \hline
+			\multicolumn{1}{|c|}{1200}            & \multicolumn{1}{c|}{706.757}              & 0.470967             \\ \hline
+			\multicolumn{1}{|c|}{2000}            & \multicolumn{1}{c|}{705.517}              & 0.469326             \\ \hline
+			\multicolumn{1}{|c|}{2500}            & \multicolumn{1}{c|}{704.37}               & 0.467826             \\ \hline
+			\multicolumn{1}{|c|}{3500}            & \multicolumn{1}{c|}{701.313}              & 0.463844             \\ \hline
+			\multicolumn{1}{|c|}{5000}            & \multicolumn{1}{c|}{695.028}              & 0.455645             \\ \hline
+		\end{tabular}
+		\caption{Corriente $I_o$ teórica - Circuito Serie}
+		\label{tab:valores-teoricos-serie}
+	\end{table}
+	
+	Finalmente en la figura \ref{fig:} se muestra la curva de corriente $I_o$ teórica en la cual se puede apreciar que la magnitud de la corriente guarda una relación inversa con la frecuencia de corte respecto es mucho menor o mayor a la frecuencia de resonancia del circuito.
+ 	
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.5\textwidth]{media/grafica-corriente-teorica-serie}
+ 		\caption{Corriente de salida teórica respecto a la frecuencia}
+ 		\label{fig:grafica-corriente-teorica-serie}
+ 	\end{figure}
+ 	
+ 	Por otro lado cabe destacar que aunque experimentalmente la corriente de salida $I_o$ no disminuye significativamente para valores de frecuencia mucho mayores a la frecuencia de resonancia $Fo = 708.93$ obtenido como se menciona en \cite{krauss_estado_solido}, en la gráfica obtenida teóricamente la magnitud de este parámetro si se ve afectado apreciándose una pendiente negativa o decreciente para una frecuencia mayor a los 200 Hz.
+ 	
 	\section{Curva teórica $I_O$ del circuito resonante en paralelo}
 	\begin{equation}
 		I_o = \frac{V_o}{Z} = \frac{V_o}{\sqrt{R^2 + \frac{\omega^2 L^2}{(1 - \omega^2 CL)^2}}}

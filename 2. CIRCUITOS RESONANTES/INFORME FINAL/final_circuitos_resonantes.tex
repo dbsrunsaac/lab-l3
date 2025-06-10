@@ -210,6 +210,31 @@
  	
  	Por otro lado cabe destacar que aunque experimentalmente la corriente de salida $I_o$ no disminuye significativamente para valores de frecuencia mucho mayores a la frecuencia de resonancia $Fo = 708.93$ obtenido como se menciona en \cite{krauss_estado_solido}, en la gráfica obtenida teóricamente la magnitud de este parámetro si se ve afectado apreciándose una pendiente negativa o decreciente para una frecuencia mayor a los 200 Hz.
  	
+ 	% Curva experimental
+ 	\subsection{Análisis del circuito serie - implementando }
+ 	
+ 	Durante la experiencia en laboratorio para la implementación del circuito en serie, mostrado en la figura \ref{fig:implementacion-serie} se tuvo como referencias los parámetros mmostrados en la guía.
+ 	
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.5\textwidth]{media/implementacion-serie}
+ 		\caption{Circuito implementado - Circuito resonante serie}
+ 		\label{fig:implementacion-serie}
+ 	\end{figure}
+ 	
+ 	Sin embargo al realizar las pruebas experimentales para la curva de corriente respecto a la frecuencia del circuito se pudo apreciar una respuesta diferente a la calculada de forma teórica y mediante la simulación realizada en Multisim. 
+ 	
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.5\textwidth]{media/curva-salida}
+ 		\caption{Curva de la corriente de salida}
+ 		\label{fig:curva-salida}
+ 	\end{figure}
+ 	
+ 	De tal curva se puede justificar el cambio en la respuesta del circuito resonante debido a las variaciones en magnitud de los componentes usados, siendo los más notable la inductancia y capacitancia que se encuentran limitados comercialmente.
+ 	
+ 	Además en la figura \ref{fig:curva-salida} se pudo apreciar que tal forma de onda se asemeja a la respuesta de un sistema de segundo orden y se compara tal comportamiento en el dominio de la frecuencia, guarda relación con un filtro pasabanda que normalmente esta conformado por una configuración en serie o paralelo RLC.
+ 	
 	\section{Curva teórica $I_O$ del circuito resonante en paralelo}
 	\begin{equation}
 		I_o = \frac{V_o}{Z} = \frac{V_o}{\sqrt{R^2 + \frac{\omega^2 L^2}{(1 - \omega^2 CL)^2}}}
